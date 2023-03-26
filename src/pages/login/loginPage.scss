@@ -1,0 +1,77 @@
+@use '../../constants/constant.scss' as *;
+
+.login{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+
+    .login-logo{
+        position: absolute;
+        left: 97px;
+        top: 12%;
+    }
+    .login-page{
+        width: inherit;
+        height: inherit;
+        @include flex;
+        overflow: hidden;
+        .login-page-pic{
+            width: 50%;
+            margin-top: 15%;
+            img{
+                margin: auto;
+                width: 100%;
+            }
+        }
+        .login-page-details{
+            width: 50%;
+        }
+    }
+    .login-page-form-section{
+        width: 100%;
+        max-width: 447px;
+        margin: auto;
+        h2{
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 55px;
+            letter-spacing: -0.04em;
+            color: $headerColor;
+            margin-bottom: 10px;
+        }
+        p{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            color: $subHeadingColor;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.5rem;
+            margin-top: 3.75rem;
+            .password-input{
+                width: inherit;
+                @include flex;
+                justify-content: space-between;
+                border: 2px solid $borderColor;
+                padding: 0 1rem 0 0;
+                border-radius: 5px;
+            }
+            p{
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 16px;
+                text-align: left;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: $buttonColor;
+                cursor: pointer;
+            }
+        }
+    }
+}

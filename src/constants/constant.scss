@@ -1,0 +1,8 @@
+$headerColor: #213F7D;
+$subHeadingColor: #545F7D;
+$borderColor: rgba(84, 95, 125, 0.15);
+$buttonColor: #39CDCC;
+@mixin flex {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,19 @@
+@use '../../constants/constant.scss' as *;
+
+button{
+    background: $buttonColor;
+    border-radius: 8px;
+    width: inherit;
+    height: 48px;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    margin-top: .5rem;
+}

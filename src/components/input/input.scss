@@ -1,0 +1,15 @@
+@use '../../constants/constant.scss' as *;
+
+input{
+    width: inherit;
+    height: 50px;
+    background: #FFFFFF;
+    border: 2px solid $borderColor;
+    border-radius: 5px;
+    padding: 0 1rem;
+    outline: none;
+}
+.passwordInput{
+    border: none;
+    width: 100%;
+}
