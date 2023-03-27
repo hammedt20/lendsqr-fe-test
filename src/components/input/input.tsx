@@ -18,3 +18,14 @@ export function Input ({ type, name, placeholder, styleType }: inputType) {
    />
   );
 }
+
+export function SearchInput ({ type, name, placeholder }: inputType) {
+  return (
+   <input 
+    type={type}
+    name={name}
+    placeholder={placeholder}
+    className = 'search-input'
+   />
+  );
+}

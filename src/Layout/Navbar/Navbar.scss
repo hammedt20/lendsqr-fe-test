@@ -1,0 +1,51 @@
+@use '../../constants/constant.scss' as *;
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6.25rem;
+    @include flex;
+    justify-content: space-between;
+    padding: 0 1.875rem;
+    column-gap: 2rem;
+    z-index: 99;
+    .nav-heading{
+        width: 53%;
+        @include flex;
+        justify-content: space-between;
+        column-gap: 2rem;
+    }
+    .nav-details{
+        @include flex;
+        column-gap: 30px;
+    }
+}
+.nav-heading{
+    form{
+        @include flex;
+        max-width: 400px;
+        width: 100%;
+    }
+}
+.nav-details{
+    .nav-details-text{
+        text-decoration: underline;
+        margin-right: 20px;
+        color: $headerColor;
+        line-height: 19px;
+    }
+    .nav-details-profile{
+        @include flex;
+        column-gap: .5rem;
+        img{
+            border-radius: 50%;
+        }
+        p{
+            color: $headerColor;
+            line-height: 19px;
+            font-weight: 500;
+        }
+    }
+}
