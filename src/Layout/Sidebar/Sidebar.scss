@@ -1,0 +1,60 @@
+@use '../../constants/constant.scss' as *;
+
+.sb{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+    width: 19.65%;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+    position: fixed;
+    background-color: white;
+    top: 6.25rem;
+    left: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    color: $headerColor;
+    font-size: 16px;
+    line-height: 19px;
+    z-index: 10;
+    .sb-organization{
+        @include flex;
+        column-gap: 10px;
+        margin: 39px 0 11px 1.875rem;
+        cursor: pointer;
+    }
+    .sb-dashboard{
+        margin-left: 1.875rem;
+        @include flex;
+        column-gap: 10px;
+        opacity: 0.6;
+        cursor: pointer;
+    }
+    .sb-section-head{
+        color: $subHeadingColor;
+        margin-left: 1.875rem;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: uppercase;
+    }
+    .sb-section-list{
+        width: 100%;
+        padding: 10px 0 10px 1.875rem;
+        @include flex;
+        column-gap: 10px;
+        opacity: 0.6;
+        cursor: pointer;
+    }
+}
+
+.sb::-webkit-scrollbar{
+    width: 8px;
+}
+.sb::-webkit-scrollbar-track{
+    background-color: white;
+}
+.sb::-webkit-scrollbar-thumb:hover {
+  display: block;
+  background: $borderColor;
+  border-radius: 10px ;
+}

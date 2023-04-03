@@ -1,0 +1,23 @@
+@use '../../constants/constant.scss' as *;
+
+.dashboard{
+    background-color: #E5E5E5;
+    height: 100vh;
+    // max-height: 100%;
+    margin: 6.25rem 0 0 19.65%;
+    padding: 60px;
+    .dashboard-title{
+        // margin: 60px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        color: $headerColor;
+        // margin-top: 60px;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1.5rem;
+        margin: 40px 0;
+    }
+}
