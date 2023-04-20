@@ -5,16 +5,20 @@ export interface inputType {
     type: string,
     name: string,
     placeholder: string,
-    styleType?: string
+    styleType?: string,
+    handleChange?:  ((e: any) => void) | undefined,
 }
 
-export function Input ({ type, name, placeholder, styleType }: inputType) {
+
+export function Input ({ type, name, placeholder, styleType, handleChange }: inputType) {
   return (
    <input 
     type={type}
     name={name}
     placeholder={placeholder}
     className = {styleType && "passwordInput"}
+    onChange = {handleChange}
+    // required
    />
   );
 }

@@ -1,0 +1,216 @@
+@use '../../constants/constant.scss' as *;
+
+.user-page{
+    background-color: #E5E5E5;
+    min-height: calc(100vh - 6.25rem);
+    margin: 6.25rem 0 0 19.65%;
+    padding: 60px;
+    .user-page-navigation{
+        @include flex;
+        column-gap: 10px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $subHeadingColor;
+    }
+    .user-page-headerbar{
+        @include flex;
+        justify-content: space-between;
+        column-gap: 2rem;
+        margin: 20px 0;
+        p{
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            color: $headerColor;
+        }
+        .user-page-headerbar-btns{
+            @include flex;
+            column-gap: 20px;
+            button{
+                padding: 12px 16px;
+                border-radius: 8px;
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 16px;
+                text-align: center;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                background-color: transparent;
+            }
+            :nth-child(1){
+                border: 1px solid #E4033B;
+                color: #E4033B;
+            }
+            :nth-child(2){
+                border: 1px solid #39CDCC;
+                color: #39CDCC;
+            }
+        }
+    }
+    .user-page-profilebar{
+        background-color: #fff;
+        padding: 30px 30px 0px;
+        border: 1px solid rgba(33, 63, 125, 0.06);
+        box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        margin: 40px 0;
+        .user-page-profilebar-top{
+            @include flex;
+            // column-gap: 30px;
+            margin-bottom: 40px;
+            hr{
+                width: 80px;
+                height: 0px;
+                opacity: 0.2;
+                border: 1px solid #545F7D;
+                transform: rotate(90deg);
+            }
+            .user-page-profilebar-profiledetails{
+                @include flex;
+                column-gap: 20px;
+                // border-right: 1px solid rgba(84,95,125, 0.2);
+                // padding-right: 30px;
+                img{
+                    width: 100px;
+                }
+                .user-page-profilebar-profiledetails-texts{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: .5rem;
+                    :nth-child(1){
+                        font-weight: 500;
+                        font-size: 22px;
+                        line-height: 26px;
+                        color: $headerColor;
+                    }
+                    :nth-child(2){
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 16px;
+                        color: $subHeadingColor;
+                    }
+                }
+            }
+            .user-page-profilebar-rating{
+                display: flex;
+                flex-direction: column;
+                row-gap: .5rem;
+                // border-right: 1px solid rgba(84,95,125, 0.2);
+                // padding-right: 30px;
+                :nth-child(1){
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: $subHeadingColor;
+                }
+            }
+            .user-page-profilebar-bankaccount{
+                display: flex;
+                flex-direction: column;
+                row-gap: 12px;
+                :nth-child(1){
+                    font-weight: 500;
+                    font-size: 22px;
+                    line-height: 26px;
+                    color: $headerColor;
+                }
+                :nth-child(2){
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 14px;
+                    color: $headerColor;
+                }
+            }
+        }
+        .user-page-profilebar-bottom{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            .active{
+                border-bottom: 2px solid #39CDCC;
+                color: #39CDCC;
+                padding: 10px 25px;
+            }
+            li{
+                padding: 10px 10px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                text-align: center;
+                color: rgba(0, 0, 0, 0.8);
+            }
+        }
+    }
+    .user-page-info{
+        padding: 30px;
+        background: #FFFFFF;
+        border: 1px solid rgba(33, 63, 125, 0.06);
+        box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        .user-page-info-personalinfo{
+            border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+            padding: 0 0 30px 0;
+            .title{
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                color: $headerColor;
+                margin-bottom: 30px;
+            }
+            .user-page-info-personalinfo-items{
+                display: grid;
+                grid-template-columns: repeat(5, 155px);
+                justify-content: space-between;
+                row-gap: 30px;
+                .user-page-info-personalinfo-item{
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5rem;
+                    color: $subHeadingColor;
+                    :nth-child(1){
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 14px;
+                        text-transform: uppercase;
+                    }
+                    :nth-child(2){
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+            .user-page-info-personalinfo-items-2{
+                display: grid;
+                grid-template-columns: repeat(4, 214px);
+                justify-content: space-between;
+                row-gap: 30px;
+                .user-page-info-personalinfo-item{
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5rem;
+                    color: $subHeadingColor;
+                    :nth-child(1){
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 14px;
+                        text-transform: uppercase;
+                    }
+                    :nth-child(2){
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+        }
+        .user-page-info-personalinfo:last-child{
+            border: none;
+        }
+    }
+}

@@ -1,0 +1,127 @@
+@use '../../constants/constant.scss' as *;
+
+@mixin inputField{
+    background-color: #FFFFFF;
+    border: 1px solid rgba(33,63,125, 0.2);
+    border-radius: 8px;
+}
+@mixin inputTexts{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #545F7D;
+    opacity: 0.7;
+}
+@mixin filterBtn{
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+table{
+    border: 3px solid black;
+    table-layout: fixed;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    padding: 30px;
+    thead th, tbody td{
+        text-align: left;
+        color: $subHeadingColor;
+        word-wrap: break-word;
+        position: relative;
+    }
+    thead th{
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 14px;
+        @include flex;
+        column-gap: 10px;
+        text-transform: uppercase;
+        color: $subHeadingColor;
+        margin-bottom: 14px;
+        position: relative;
+    }
+    tr{
+        display: grid;
+        grid-template-columns: 14% 11.5% 16% 15% 15.76% 12% 2.05%;
+        justify-content: space-between;
+        // column-gap: 35px;
+    }
+    tbody td{
+        padding: 23px 0;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    tbody tr{
+        border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+    }
+    tbody tr:last-child{
+        border: none;
+    }
+}
+
+.filter{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    label{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: $subHeadingColor;
+    }
+    input, select{
+        width: 100%;
+        padding: 12px 20px;
+        @include inputTexts();
+        @include inputField();
+        height: auto;
+        margin-top: 6px;
+    }
+    #organization, #status{
+        background-position: 197.39px;
+    }
+    ::placeholder{
+        @include inputTexts();
+    }
+    .action-buttons{
+        @include flex;
+        justify-content: space-between;
+        :nth-child(odd){
+            background-color: white;
+            border: 1px solid #545F7D;
+            color: #545F7D;
+            @include filterBtn();
+        }
+        :nth-child(even){
+            @include filterBtn(); 
+            background: #39CDCC;
+            border: 1px solid #39CDCC;
+            color: white;
+        }
+    }
+}
+
+.menu-lists {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+    li{
+        @include flex;
+        column-gap: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: capitalize;
+    }
+}

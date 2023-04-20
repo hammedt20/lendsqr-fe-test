@@ -2,8 +2,7 @@
 
 .dashboard{
     background-color: #E5E5E5;
-    height: 100vh;
-    // max-height: 100%;
+    min-height: calc(100vh - 6.25rem);
     margin: 6.25rem 0 0 19.65%;
     padding: 60px;
     .dashboard-title{
@@ -20,4 +19,55 @@
         column-gap: 1.5rem;
         margin: 40px 0;
     }
+    .pagination{
+        margin-top: 20px;
+        color: $headerColor; 
+        @include flex;
+        justify-content: space-between;
+    }
+    select{
+        border-radius: 4px;
+        padding: 7px 15px 7px 12px;
+        border: none;
+        width: 80px;
+        appearance: none;
+        color: $headerColor;
+        outline: none;
+        background: url('../../assets/svg/arrow-down.svg') no-repeat;
+        background-position: 55.39px;
+        background-size: 12px;
+        background-color: rgba(33, 63, 125, 0.1);
+        cursor: pointer;
+    }
+}
+
+.active-paginate{
+    color: $headerColor;
+}
+.paginate {
+    list-style: none;
+    @include flex;
+    gap: 1.25rem;
+    cursor: pointer;
+    // color: $headerColor;
+    color: rgba(84,95,125, 0.6);
+    // opacity: 0.6;
+}
+.next-paginate{
+    transform: rotate(-90deg);
+    color: #213F7D;
+    background: rgba(33, 63, 125, 0.1);
+    border-radius: 4px;
+    @include flex;
+    justify-content: center;
+    padding: 5px;
+}
+.prev-paginate{
+    background: rgba(33, 63, 125, 0.1);
+    color: #213F7D;
+    transform: rotate(90deg);
+    border-radius: 4px;
+    @include flex;
+    justify-content: center;
+    padding: 5px;
 }

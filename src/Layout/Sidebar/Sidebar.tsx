@@ -28,9 +28,9 @@ export function Sidebar () {
       </div>
       <div className='sb-section'>
         <div className='sb-section-head'>Customers</div>
-        {customerData.map(data => {
+        {customerData.map((data, id) => {
             return (
-                <div className='sb-section-list'>
+                <div className='sb-section-list' key={id}>
                     <span>{data.icon}</span>
                     {data.text}
                 </div>
@@ -39,9 +39,9 @@ export function Sidebar () {
       </div>
       <div className='sb-section'>
         <div className='sb-section-head'>Businesses</div>
-        {businessData.map(data => {
+        {businessData.map((data, id) => {
             return (
-                <div className='sb-section-list'>
+                <div key={id} className='sb-section-list'>
                     <span>{data.icon}</span>
                     {data.text}
                 </div>
@@ -50,9 +50,9 @@ export function Sidebar () {
       </div>
       <div className='sb-section'>
         <div className='sb-section-head'>Settings</div>
-        {settingData.map(data => {
+        {settingData.map((data, id) => {
             return (
-                <div className='sb-section-list'>
+                <div key={id} className='sb-section-list'>
                     <span>{data.icon}</span>
                     {data.text}
                 </div>
